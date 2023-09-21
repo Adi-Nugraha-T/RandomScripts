@@ -1,0 +1,9 @@
+# Description : get list of directory users that has not synced since choosen time
+
+#Connect to msol server
+Connect-MsolService
+#set date for last sync
+$startdate = Get-Date -Year 2017 -Date 31 -Month 12
+
+#actually get the list of users based on since last sync date of $startdate
+Get-MsolUser -All -Synchronized | Where-Object {($_.LastDirSyncTime -le $startdate)}| select UserPrincipalName, LastDirSyncTime

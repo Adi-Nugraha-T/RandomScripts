@@ -1,3 +1,5 @@
+Scripts based on vmware euc-samples-master on https://github.com/vmware-samples/euc-samples/
+
 How to use
 1. download the folder as zip
 2. upload as application to VNware WS UEM

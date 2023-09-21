@@ -1,4 +1,4 @@
-Scripts based on vmware euc-samples-master on https://github.com/vmware-samples/euc-samples/
+Scripts based on vmware euc-samples-master on https://github.com/vmware-samples/euc-samples/ to change wallpaper on Win 10 and above devices because Personalization CSP requires Enterprise / Education SKU
 
 How to use
 1. download the folder as zip

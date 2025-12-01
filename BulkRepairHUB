@@ -1,0 +1,26 @@
+PreFace
+Sending Bulk Requests to UEM 
+Reference 
+https://community.postman.com/t/can-i-just-type-id-and-password-into-basic-auth-if-i-want-to-authenticate/6441/6
+https://learning.postman.com/docs/sending-requests/capturing-request-data/interceptor/
+https://blog.postman.com/using-csv-and-json-files-in-the-postman-collection-runner/
+
+
+The basic process is as follows
+1. Prepare DeviceID list by RestAPI / Intelligence Reports
+    - Use DevID as header (might be Case Sensitive) 
+2. Capture the request traffic with Postman Interceptor Extension
+    - Install Extension on preferred browser
+    - Start Postman
+    - Login to UEM and go to device detail
+    - Start Capture on the extension (sample capture request below should be populated with the required cookies for auth) 
+      https://cn1689.awmdm.com/AirWatch/Devices/RequestHubRepair/xxxxxx?workpasscode=false&actionType=
+    - Send Repair hub command 
+    - Stop capture on the extension and open link to Postman app (desktop)
+3. Postman Preparations
+    - Save the request to a new / existing collection
+    - Set variables in the collection with DevID as variable name and a random device id as value
+    - edit the request to use DevID as variable, eg: https://cn1689.awmdm.com/AirWatch/Devices/RequestHubRepair/{{DevID}}?workpasscode=false&actionType=
+    - go to the collection and click Run
+    - On the test data file clik select file and choose the csv files with device id listed  (usually choose Use Locally) 
+    - Run the collection 

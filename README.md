@@ -1,2 +1,2 @@
 # RandomScripts
-# contains scripts used for multiple purposes for pernal archive
+# contains scripts used for multiple purposes for personal archive
